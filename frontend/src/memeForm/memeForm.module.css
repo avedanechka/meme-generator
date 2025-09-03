@@ -1,0 +1,101 @@
+.main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow-y: auto;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.gallery::-webkit-scrollbar {
+    width: 7px;
+}
+.gallery::-webkit-scrollbar-thumb {
+    background: #382923;
+    border-radius: 5px;
+}
+
+.photo {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+    margin: 8px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.photo.selected {
+    border: 2px solid #da6900;
+    border-radius: 2px;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.input {
+    height: 50px;
+    background: none;
+    margin: 8px 0;
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    font-size: 3vh;
+    color: white;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+}
+.input:hover {
+    background-color: #241a16;
+    cursor: pointer;
+}
+.input:focus {
+    outline: none;
+    background-color: #241a16;
+}
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.submit {
+    width: 100%;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.submitButton {
+    width: 100%;
+    height: 100%;
+    background-color: #382923;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 4vh;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.submitButton:hover {
+    background-color: #4a362d;
+}
+.submitButton:disabled {
+    background-color: #1a1411;
+    color: #555;
+    cursor: not-allowed;
+}
